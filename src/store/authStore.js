@@ -18,7 +18,7 @@ export const useAuthStore = defineStore("auth", {
 			email: "tuic-admin@gov.taipei",
 			gid: 1,
 			id: 1,
-			name: "儀表板測試者🤩",
+			name: "陳為欣呂麗🤩",
 			status: 1,
 			type: 0,
 		},
