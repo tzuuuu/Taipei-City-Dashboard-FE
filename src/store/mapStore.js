@@ -20,6 +20,7 @@ import mapStyle from "../assets/configs/mapbox/mapStyle.js";
 import {
 	MapObjectConfig,
 	TaipeiTown,
+	TaoyuanTown,
 	TaipeiVillage,
 	TaipeiBuilding,
 	maplayerCommonPaint,
@@ -86,6 +87,16 @@ export const useMapStore = defineStore("map", {
 		// Due to performance concerns, Taipei 3D Buildings won't be added in the mobile version
 		initializeBasicLayers() {
 			const authStore = useAuthStore();
+			fetch(`${BASE_URL}/mapData/taoyuan_town.geojson`)
+			.then((response) => response.json())
+			.then((data) => {
+				this.map
+					.addSource("taoyuan_town", {
+						type: "geojson",
+						data: data,
+					})
+					.addLayer(TaoyuanTown);
+			});
 			fetch(`${BASE_URL}/mapData/taipei_town.geojson`)
 				.then((response) => response.json())
 				.then((data) => {
