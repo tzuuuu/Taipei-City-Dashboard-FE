@@ -1564,6 +1564,76 @@
 			"tags": [],
 			"contributors": ["tuic"]
 		},
+		"58": {
+			"id": 58,
+			"index": "congested_road",
+			"map_config": [
+				{
+					"index": "traffic_live_view",
+					"paint": {
+						"fill-color": [
+							"match",
+							["get", "壅塞程度"],
+							"壅塞",
+							"#EC4037",
+							"車多",
+							"#ff8c1a",
+							"順暢",
+							"#4dd97a",
+							"#ccc"
+						]
+					},
+					"property": [
+						{
+							"key": "snippet",
+							"name": "路段代號"
+						},
+						{
+							"key": "壅塞程度",
+							"name": "壅塞程度"
+						},
+						{
+							"key": "description",
+							"name": "描述"
+						},
+						{
+							"key": "update_at",
+							"name": "更新時間"
+						}
+					],
+					"type": "fill",
+					"title": "壅塞程度"
+				}
+			],
+			"map_filter": {
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "壅塞程度"
+				}
+			},
+			"history_data": true,
+			"history_data_color": ["#B56969", "#BBB"],
+			"chart_config": {
+				"color": ["#B56969", "#DAA368", "#DED38E", "#B6C995", "#84A28A"],
+				"types": ["DonutChart", "BarChart", "TreemapChart"],
+				"unit": "%"
+			},
+			"name": "壅塞路況",
+			"source": "交通局",
+			"time_from": "2023-10-31T18:06:00.000+08:00",
+			"time_to": "2023-10-31T18:06:00.000+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "day",
+			"short_desc": "顯示當前全桃園市道路暢通情況",
+			"long_desc": "顯示當前全桃園市道路暢通情況，資料來源為桃園市交通局公開資料，每1天更新。",
+			"use_case": "整體道路暢通情況反映了交通繁忙程度，可以透過與過去平均對比判斷當下交通是否出現異常情況。",
+			"links": [
+				"https://data.gov.tw/dataset/149613",
+				"https://data.tycg.gov.tw/opendata/datalist/datasetMeta?oid=7b879012-ec7f-4ea6-8af4-9e5ea1bcb39c"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
+		},
 		"59": {
 			"id": 59,
 			"index": "water_level",
@@ -2215,6 +2285,29 @@
 			"short_desc": "顯示緊急救護的上月統計資訊",
 			"long_desc": "顯示緊急救護的上月統計資訊，資料來源為台北市消防局內部資料，每月更新。",
 			"use_case": "瞭解緊急救護服務案件的統計資訊，有助於優化救護服務的配置及應急措施。",
+			"links": null,
+			"tags": [],
+			"contributors": ["tuic"]
+		},
+		"84": {
+			"id": 84,
+			"index": "police_dispatched",
+			"map_config": null,
+			"chart_config": {
+				"color": ["#bc7262"],
+				"types": [ "RadarChart", "ColumnChart","DistrictChart"],
+				"unit": "次"
+			},
+			"name": "路口出警次數",
+			"source": "警察局",
+			"history_data": true,
+			"time_from": "2024-01-01T00:00:00+08:00",
+			"time_to": "2024-01-07T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "day",
+			"short_desc": "顯示路口出警的上週統計資訊",
+			"long_desc": "顯示路口出警的上週統計資訊，資料來源為桃園市警察局內部資料，每週更新。",
+			"use_case": "瞭解桃園各行政區之路口出警次數的統計資訊，有助於作為設置測試路口(行人專用時相)的標準。",
 			"links": null,
 			"tags": [],
 			"contributors": ["tuic"]
@@ -3969,6 +4062,96 @@
 				"https://github.com/tpe-doit/YouBike-Optimization"
 			],
 			"contributors": ["tuic"]
+		},
+		"149": {
+			"id": 149,
+			"index": "pedestrian_scramble_kpi",
+			"map_config": [
+				{
+					"index": "childcare_resource",
+					"paint": {
+						"circle-color": [
+							"case",
+							["==", ["get", "inst_type"], "私立托嬰中心"],
+							"#FFE7D8",
+							["==", ["get", "inst_type"], "公辦民營托嬰中心"],
+							"#D69062",
+							["==", ["get", "inst_type"], "社區公共托育家園"],
+							"#D0793F",
+							"#A44404"
+						]
+					},
+					"property": [
+						{
+							"key": "district",
+							"name": "行政區"
+						},
+						{
+							"key": "inst_type",
+							"name": "機構類型"
+						},
+						{
+							"key": "inst_name",
+							"name": "機構名稱"
+						},
+						{
+							"key": "address",
+							"name": "地址"
+						},
+						{
+							"key": "phone",
+							"name": "電話"
+						}
+					],
+					"title": "育兒支持機構地圖",
+					"type": "circle",
+					"size": "big",
+					"icon": null
+				}
+			],
+			"map_filter": {
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "district",
+					"yParam": "inst_type"
+				}
+			},
+			"history_data": true,
+			"history_data_color": ["#74B9FF", "#AAF0D1"," #FFD700", "#FFA500","#FF6F61" ],
+			"chart_config": {
+				"categories": [
+					"桃園區",
+					"中壢區",
+					"大溪區",
+					"楊梅區",
+					"蘆竹區",
+					"大園區",
+					"龜山區",
+					"八德區",
+					"龍潭區",
+					"平鎮區",
+					"新屋區",
+					"觀音區",
+					"復興區"
+				],
+				"types": ["HeatmapChart", "DistrictChart"],
+				"color": ["#B56969","#DAA368", "#3A69A0"],
+				"unit": "個行人專用時相"
+			},
+			"name": "行人專用時相績效",
+			"source": "交通局",
+			"time_from": "2024-01-01T00:00:00+08:00",
+			"time_to": "2024-01-07T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "week",
+			"short_desc": "顯示桃園市各行政區設置行人專用時相後的績效。",
+			"long_desc": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每週更新。",
+			"use_case": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
+			"links": [
+			],
+			"contributors": [
+				"tuic"
+			]
 		},
 		"150": {
 			"id": 150,

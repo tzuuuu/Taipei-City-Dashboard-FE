@@ -30,8 +30,10 @@ const linkQuery = computed(() => {
 				<img src="../assets/images/TUIC.svg" alt="tuic logo" />
 			</div>
 			<div>
-				<h1>{{ VITE_APP_TITLE }}</h1>
-				<h2>Taipei City Dashboard Open Source</h2>
+				<!-- <h1>{{ VITE_APP_TITLE }}</h1>
+				<h2>Taipei City Dashboard Open Source</h2> -->
+				<h1>讓我們不再「行」同「默」路</h1>
+				<h2>Taoyuan City Dashboard</h2>
 			</div>
 		</div>
 		<div class="navbar-tabs hide-if-mobile">

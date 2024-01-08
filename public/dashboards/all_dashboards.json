@@ -96,6 +96,12 @@
 				"106"
 			],
 			"icon": "public"
+		},
+		{
+			"name": "路口管控",
+			"index": "intersection",
+			"components": ["58","84","149"],
+			"icon": "edit_road"
 		}
 	]
 }
