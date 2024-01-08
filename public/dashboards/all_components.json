@@ -1621,7 +1621,7 @@
 			"name": "壅塞路況",
 			"source": "交通局",
 			"time_from": "2023-10-31T18:06:00.000+08:00",
-			"time_to": "null",
+			"time_to": "2023-10-31T18:06:00.000+08:00",
 			"update_freq": 1,
 			"update_freq_unit": "day",
 			"short_desc": "顯示當前全桃園市道路暢通情況",
@@ -4135,7 +4135,7 @@
 					"復興區"
 				],
 				"types": ["HeatmapChart", "DistrictChart"],
-				"color": ["#A03A3B", "#BF672B", "#3A69A0"],
+				"color": ["#B56969","#DAA368", "#3A69A0"],
 				"unit": "個行人專用時相"
 			},
 			"name": "行人專用時相績效",
