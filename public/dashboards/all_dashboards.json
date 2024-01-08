@@ -101,7 +101,7 @@
 			"name": "路口管控",
 			"index": "intersection",
 			"components": ["58","84","149"],
-			"icon": "notifications_active"
+			"icon": "edit_road"
 		}
 	]
 }
