@@ -1671,9 +1671,10 @@
 				}
 			},
 			"history_data": true,
-			"history_data_color": ["#B56969", "#BBB"],
+			"history_data_color": ["#B56969"],
 			"chart_config": {
 				"color": [
+					"#8498a2",
 					"#84A28A",
 					"#B6C995",
 					"#DED38E",
@@ -1690,7 +1691,7 @@
 			"update_freq": null,
 			"update_freq_unit": null,
 			"short_desc": "顯示當前全桃園市道路暢通情況",
-			"long_desc": "顯示當前全桃園市道路暢通情況，資料來源為桃園市交通局公開資料。",
+			"long_desc": "顯示當前全桃園市道路暢通情況，資料來源為桃園市交通局公開資料。壅塞級別是根據道路服務水準定義，從A到F，代表從順暢到車多再到壅塞。",
 			"use_case": "整體道路暢通情況反映了交通繁忙程度，可以透過與過去平均對比判斷當下交通是否出現異常情況。",
 			"links": [
 				"https://data.gov.tw/dataset/149613",
