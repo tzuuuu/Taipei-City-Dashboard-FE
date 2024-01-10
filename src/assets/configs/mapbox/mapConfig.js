@@ -360,6 +360,20 @@ export const maplayerCommonLayout = {
 	"symbol-little_green_people": {
 		"icon-image": "little_green_people",
 	},
+	"symbol-police_station": {
+		"icon-image": "police_station",
+		"icon-size": [
+			"interpolate",
+			["linear"],
+			["zoom"],
+			11.99,
+			0.03,
+			14,
+			0.04,
+			22,
+			0.09,
+		],
+	},
 	"symbol-metro-density": {
 		"icon-image": "metro",
 		"icon-size": [
