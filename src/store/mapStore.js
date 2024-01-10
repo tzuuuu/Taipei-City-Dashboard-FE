@@ -138,6 +138,7 @@ export const useMapStore = defineStore("map", {
 				"bike_orange",
 				"bike_red",
 				"little_green_people",
+				"police_station",
 			];
 			images.forEach((element) => {
 				this.map.loadImage(

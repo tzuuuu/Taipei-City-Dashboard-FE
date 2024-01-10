@@ -165,6 +165,65 @@
 			"source": "警察局",
 			"contributors": ["tuic"]
 		},
+		"10": {
+			"id": 10,
+			"index": "police_facility_taoyuan",
+			"map_config": [
+				{
+					"index": "police_station_taoyuan",
+					"property": [
+						{
+							"key": "OFFICE_NAME",
+							"name": "所屬分局"
+						},
+						{
+							"key": "STATION_NAME",
+							"name": "中文名稱"
+						},
+						{
+							"key": "ENG_NAME",
+							"name": "英文名稱"
+						},
+						{
+							"key": "POSTCODE",
+							"name": "郵遞區號"
+						},
+						{
+							"key": "ADDR",
+							"name": "地址"
+						},
+						{
+							"key": "PHONE",
+							"name": "電話"
+						}
+					],
+					"type": "symbol",
+					"icon": "police_station",
+					"title": "警察局"
+				}
+			],
+			"map_filter": {
+				"mode": "byLayer"
+			},
+			"chart_config": {
+				"types": ["MapLegend"]
+			},
+			"chart_data": [
+				{
+					"type": "symbol",
+					"icon": "police_station",
+					"name": "警察局"
+				}
+			],
+			"name": "警察局分佈",
+			"source": "警察局",
+			"short_desc": "顯示全市警察局的點位",
+			"long_desc": "顯示全市警察局的點位，資料來源為桃園市警察局公開資料，不定期更新。",
+			"use_case": "了解桃園市現今已有的警察局，疊加於地圖顯示",
+			"links": ["https://data.gov.tw/dataset/5958"],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
 		"11": {
 			"id": 11,
 			"index": "designate",
@@ -1615,11 +1674,11 @@
 			"history_data_color": ["#B56969", "#BBB"],
 			"chart_config": {
 				"color": [
-					"#B56969",
-					"#DAA368",
-					"#DED38E",
+					"#84A28A",
 					"#B6C995",
-					"#84A28A"
+					"#DED38E",
+					"#DAA368",
+					"#B56969"
 				],
 				"types": ["DonutChart", "BarChart", "TreemapChart"],
 				"unit": "%"
@@ -1627,11 +1686,11 @@
 			"name": "壅塞路況",
 			"source": "交通局",
 			"time_from": "2023-10-31T18:06:00.000+08:00",
-			"time_to": "2023-10-31T18:06:00.000+08:00",
-			"update_freq": 1,
-			"update_freq_unit": "day",
+			"time_to": null,
+			"update_freq": null,
+			"update_freq_unit": null,
 			"short_desc": "顯示當前全桃園市道路暢通情況",
-			"long_desc": "顯示當前全桃園市道路暢通情況，資料來源為桃園市交通局公開資料，每1天更新。",
+			"long_desc": "顯示當前全桃園市道路暢通情況，資料來源為桃園市交通局公開資料。",
 			"use_case": "整體道路暢通情況反映了交通繁忙程度，可以透過與過去平均對比判斷當下交通是否出現異常情況。",
 			"links": [
 				"https://data.gov.tw/dataset/149613",
@@ -3514,7 +3573,7 @@
 			"history_data": false,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#519690"],
+				"color": ["#ded373"],
 				"unit": "分"
 			},
 			"name": "路口績效",
@@ -3522,12 +3581,11 @@
 			"time_from": "2023-09-01T00:00:00+08:00",
 			"time_to": "2023-12-25T23:59:59+08:00",
 			"update_freq": 1,
-			"update_freq_unit": "week",
+			"update_freq_unit": "day",
 			"short_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的績效分數",
-			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每週更新。",
+			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每日更新。",
 			"use_case": "桃園市中北路實踐路口的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
-			"links": [
-			],
+			"links": null,
 			"tags": [],
 			"contributors": ["cxll"]
 		},
@@ -3538,7 +3596,7 @@
 			"history_data": false,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#719690"],
+				"color": ["#dcf043"],
 				"unit": "次"
 			},
 			"name": "出警次數",
@@ -3546,12 +3604,11 @@
 			"time_from": "2023-09-01T00:00:00+08:00",
 			"time_to": "2023-12-25T23:59:59+08:00",
 			"update_freq": 1,
-			"update_freq_unit": "month",
+			"update_freq_unit": "day",
 			"short_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的出警次數",
 			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的出警次數，資料來源為桃園市警察局內部資料，每日更新",
 			"use_case": "桃園市中北路實踐路口出警次數的統計資訊，有助於作為行人專用時相的績效指標之一。",
-			"links": [
-			],
+			"links": null,
 			"tags": [],
 			"contributors": ["cxll"]
 		},
@@ -3570,12 +3627,11 @@
 			"time_from": "2023-09-01T00:00:00+08:00",
 			"time_to": "2023-12-25T23:59:59+08:00",
 			"update_freq": 1,
-			"update_freq_unit": "month",
+			"update_freq_unit": "day",
 			"short_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的交通效能",
 			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的人車事故發生數量，資料來源為桃園市交通局內部資料，每日更新",
 			"use_case": "交通效能的評估可以考慮車輛和行人的停等延滯時間。方式是計算平均停等時間，並用這個數值來評估效能。",
-			"links": [
-			],
+			"links": null,
 			"tags": [],
 			"contributors": ["cxll"]
 		},
@@ -3603,12 +3659,11 @@
 			"time_from": "2023-09-04T00:00:00+08:00",
 			"time_to": "2023-09-10T23:59:59+08:00",
 			"update_freq": 1,
-			"update_freq_unit": "week",
+			"update_freq_unit": "day",
 			"short_desc": "顯示2023年9月4號-9月10號(週一至日)桃園市中北路實踐路口的每小時人流量",
 			"long_desc": "顯示2023年9月4號-9月10號(週一至日)桃園市中北路實踐路口的每小時人流量，資料來源為桃園市交通局內部資料，每小時更新",
 			"use_case": "藉由每小時人流量，判斷哪個時段人流較多，進一步分析此時段是否適合開設行人專用時相",
-			"links": [
-			],
+			"links": null,
 			"tags": [],
 			"contributors": ["cxll"]
 		},
@@ -3619,7 +3674,7 @@
 			"history_data": true,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#87cccc"],
+				"color": ["#b57474"],
 				"unit": "件"
 			},
 			"name": "人車事故發生數量",
@@ -4277,7 +4332,7 @@
 					"復興區"
 				],
 				"types": ["HeatmapChart", "DistrictChart"],
-				"color": ["#B56969", "#DAA368", "#3A69A0"],
+				"color": ["#B56969", "#DAA368", "#84A28A"],
 				"unit": "個行人專用時相"
 			},
 			"name": "行人專用時相績效",
@@ -4289,7 +4344,7 @@
 			"short_desc": "顯示桃園市各行政區設置行人專用時相後的績效。",
 			"long_desc": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每週更新。",
 			"use_case": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
-			"links": [],
+			"links": null,
 			"contributors":
 			["cxll"]
 		},
