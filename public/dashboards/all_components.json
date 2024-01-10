@@ -3651,7 +3651,13 @@
 					"9/10(日)"
 				],
 				"types": ["HeatmapChart"],
-				"color": ["#B56969", "#DAA368", "#DED38E", "#B6C995", "#84A28A"],
+				"color": [
+					"#B56969",
+					"#DAA368",
+					"#DED38E",
+					"#B6C995",
+					"#84A28A"
+				],
 				"unit": "人/小時"
 			},
 			"name": "人流量",
@@ -4259,42 +4265,54 @@
 			"index": "pedestrian_scramble_kpi",
 			"map_config": [
 				{
-					"index": "childcare_resource",
+					"index": "pedestrian_scramble_kpi",
 					"paint": {
 						"circle-color": [
 							"case",
-							["==", ["get", "inst_type"], "私立托嬰中心"],
-							"#FFE7D8",
-							["==", ["get", "inst_type"], "公辦民營托嬰中心"],
-							"#D69062",
-							["==", ["get", "inst_type"], "社區公共托育家園"],
-							"#D0793F",
-							"#A44404"
+							["==", ["get", "tier"], "A"],
+							"#84A28A",
+							["==", ["get", "tier"], "B"],
+							"#5CADAD",
+							["==", ["get", "tier"], "C"],
+							"#FFE66F",
+							["==", ["get", "tier"], "D"],
+							"#FF9224",
+							["==", ["get", "tier"], "E"],
+							"#B56969",
+							"#B56969"
 						]
 					},
 					"property": [
 						{
+							"key": "setup_date",
+							"name": "設置時間"
+						},
+						{
 							"key": "district",
-							"name": "行政區"
+							"name": "區域"
 						},
 						{
-							"key": "inst_type",
-							"name": "機構類型"
+							"key": "intersection_name",
+							"name": "路口名稱"
 						},
 						{
-							"key": "inst_name",
-							"name": "機構名稱"
+							"key": "longitude",
+							"name": "經度"
 						},
 						{
-							"key": "address",
-							"name": "地址"
+							"key": "latitude",
+							"name": "緯度"
 						},
 						{
-							"key": "phone",
-							"name": "電話"
+							"key": "tier",
+							"name": "級別"
+						},
+						{
+							"key": "kpi",
+							"name": "加權分數"
 						}
 					],
-					"title": "育兒支持機構地圖",
+					"title": "行人專用時相績效",
 					"type": "circle",
 					"size": "big",
 					"icon": null
@@ -4304,14 +4322,14 @@
 				"mode": "byParam",
 				"byParam": {
 					"xParam": "district",
-					"yParam": "inst_type"
+					"yParam": "tier"
 				}
 			},
 			"history_data": true,
 			"history_data_color": [
 				"#74B9FF",
 				"#AAF0D1",
-				" #FFD700",
+				"#FFD700",
 				"#FFA500",
 				"#FF6F61"
 			],
@@ -4345,8 +4363,7 @@
 			"long_desc": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每週更新。",
 			"use_case": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
 			"links": null,
-			"contributors":
-			["cxll"]
+			"contributors": ["cxll"]
 		},
 		"150": {
 			"id": 150,
@@ -5559,11 +5576,11 @@
 						},
 						{
 							"key": "longitude",
-							"name": "緯度"
+							"name": "經度"
 						},
 						{
 							"key": "latitude",
-							"name": "經度"
+							"name": "緯度"
 						},
 						{
 							"key": "time_period_1",
