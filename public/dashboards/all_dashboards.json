@@ -99,7 +99,7 @@
 		},
 		{
 			"name": "路口管控",
-			"index": "intersection"
+			"index": "intersection",
 			"components": ["58","84","149","165"],
 			"icon": "edit_road"
 		},
