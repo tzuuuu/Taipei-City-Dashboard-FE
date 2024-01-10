@@ -1614,7 +1614,7 @@
 			"history_data": true,
 			"history_data_color": ["#B56969", "#BBB"],
 			"chart_config": {
-				"color": ["#B56969", "#DAA368", "#DED38E", "#B6C995", "#84A28A"],
+				"color": ["#84A28A", "#B6C995", "#DED38E", "#DAA368", "#B56969"],
 				"types": ["DonutChart", "BarChart", "TreemapChart"],
 				"unit": "%"
 			},
@@ -1632,7 +1632,7 @@
 				"https://data.tycg.gov.tw/opendata/datalist/datasetMeta?oid=7b879012-ec7f-4ea6-8af4-9e5ea1bcb39c"
 			],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["cxll"]
 		},
 		"59": {
 			"id": 59,
@@ -2310,7 +2310,7 @@
 			"use_case": "瞭解桃園各行政區之路口出警次數的統計資訊，有助於作為設置測試路口(行人專用時相)的標準。",
 			"links": null,
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["cxll"]
 		},
 		"90": {
 			"id": 90,
@@ -3501,6 +3501,136 @@
 			"tags": [],
 			"contributors": ["tuic"]
 		},
+		"135": {
+			"id": 135,
+			"index": "kpi_zhongbei",
+			"map_config": null,
+			"history_data": false,
+			"chart_config": {
+				"types": ["ColumnChart"],
+				"color": ["#519690"],
+				"unit": "分"
+			},
+			"name": "路口績效",
+			"source": "交通局",
+			"time_from": "2023-09-01T00:00:00+08:00",
+			"time_to": "2023-12-25T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "week",
+			"short_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的績效分數",
+			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每週更新。",
+			"use_case": "桃園市中北路實踐路口的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
+			"links": [
+			],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
+		"136": {
+			"id": 136,
+			"index": "police_dispatched_zhongbei",
+			"map_config": null,
+			"history_data": false,
+			"chart_config": {
+				"types": ["ColumnChart"],
+				"color": ["#719690"],
+				"unit": "次"
+			},
+			"name": "出警次數",
+			"source": "交通局",
+			"time_from": "2023-09-01T00:00:00+08:00",
+			"time_to": "2023-12-25T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "month",
+			"short_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的出警次數",
+			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的出警次數，資料來源為桃園市警察局內部資料，每日更新",
+			"use_case": "桃園市中北路實踐路口出警次數的統計資訊，有助於作為行人專用時相的績效指標之一。",
+			"links": [
+			],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
+		"137": {
+			"id": 137,
+			"index": "traffic_efficiency",
+			"map_config": null,
+			"history_data": false,
+			"chart_config": {
+				"types": ["ColumnChart"],
+				"color": ["#71d1c1"],
+				"unit": "秒"
+			},
+			"name": "交通效能-人車平均停等時間",
+			"source": "交通局",
+			"time_from": "2023-09-01T00:00:00+08:00",
+			"time_to": "2023-12-25T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "month",
+			"short_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的交通效能",
+			"long_desc": "顯示2023年9月開始，每週一，桃園市中北路實踐路口的人車事故發生數量，資料來源為桃園市交通局內部資料，每日更新",
+			"use_case": "交通效能的評估可以考慮車輛和行人的停等延滯時間。方式是計算平均停等時間，並用這個數值來評估效能。",
+			"links": [
+			],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
+		"138": {
+			"id": 138,
+			"index": "human_traffic",
+			"map_config": null,
+			"history_data": false,
+			"chart_config": {
+				"categories": [
+					"9/4(一)",
+					"9/5(二)",
+					"9/6(三)",
+					"9/7(四)",
+					"9/8(五)",
+					"9/9(六)",
+					"9/10(日)"
+				],
+				"types": ["HeatmapChart"],
+				"color": ["#B56969", "#DAA368", "#DED38E", "#B6C995", "#84A28A"],
+				"unit": "人/小時"
+			},
+			"name": "人流量",
+			"source": "交通局",
+			"time_from": "2023-09-04T00:00:00+08:00",
+			"time_to": "2023-09-10T23:59:59+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "week",
+			"short_desc": "顯示2023年9月4號-9月10號(週一至日)桃園市中北路實踐路口的每小時人流量",
+			"long_desc": "顯示2023年9月4號-9月10號(週一至日)桃園市中北路實踐路口的每小時人流量，資料來源為桃園市交通局內部資料，每小時更新",
+			"use_case": "藉由每小時人流量，判斷哪個時段人流較多，進一步分析此時段是否適合開設行人專用時相",
+			"links": [
+			],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
+		"139": {
+			"id": 139,
+			"index": "man_car_accident",
+			"map_config": null,
+			"history_data": true,
+			"chart_config": {
+				"types": ["ColumnChart"],
+				"color": ["#87cccc"],
+				"unit": "件"
+			},
+			"name": "人車事故發生數量",
+			"source": "警察局",
+			"time_from": "2023-07-01T00:00:00+08:00",
+			"time_to": "2023-12-01T00:00:00+08:00",
+			"update_freq": 1,
+			"update_freq_unit": "month",
+			"short_desc": "顯示2023年7月開始桃園市中北路實踐路口的人車事故發生數量",
+			"long_desc": "顯示2023年7月開始桃園市中北路實踐路口的人車事故發生數量，資料來源為桃園市警察局開放資料，每月更新",
+			"use_case": "藉由人車事故發生數量，我們可以看到在行人專用時相設立前跟後的人車事故發生數，並進一步分析此路口建立行人專用時相有沒有改善行人安全問題",
+			"links": [
+				"https://data.tycg.gov.tw/opendata/datalist/datasetMeta?oid=77c34235-6fd9-4c1f-8ebd-1f675cdc7c02"
+			],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
 		"140": {
 			"id": 140,
 			"index": "building_license",
@@ -4150,7 +4280,7 @@
 			"links": [
 			],
 			"contributors": [
-				"tuic"
+				"cxll"
 			]
 		},
 		"150": {
