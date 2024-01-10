@@ -1614,7 +1614,13 @@
 			"history_data": true,
 			"history_data_color": ["#B56969", "#BBB"],
 			"chart_config": {
-				"color": ["#84A28A", "#B6C995", "#DED38E", "#DAA368", "#B56969"],
+				"color": [
+					"#B56969",
+					"#DAA368",
+					"#DED38E",
+					"#B6C995",
+					"#84A28A"
+				],
 				"types": ["DonutChart", "BarChart", "TreemapChart"],
 				"unit": "%"
 			},
@@ -2295,7 +2301,7 @@
 			"map_config": null,
 			"chart_config": {
 				"color": ["#bc7262"],
-				"types": [ "RadarChart", "ColumnChart","DistrictChart"],
+				"types": ["RadarChart", "ColumnChart", "DistrictChart"],
 				"unit": "次"
 			},
 			"name": "路口出警次數",
@@ -4247,7 +4253,13 @@
 				}
 			},
 			"history_data": true,
-			"history_data_color": ["#74B9FF", "#AAF0D1"," #FFD700", "#FFA500","#FF6F61" ],
+			"history_data_color": [
+				"#74B9FF",
+				"#AAF0D1",
+				" #FFD700",
+				"#FFA500",
+				"#FF6F61"
+			],
 			"chart_config": {
 				"categories": [
 					"桃園區",
@@ -4265,7 +4277,7 @@
 					"復興區"
 				],
 				"types": ["HeatmapChart", "DistrictChart"],
-				"color": ["#B56969","#DAA368", "#3A69A0"],
+				"color": ["#B56969", "#DAA368", "#3A69A0"],
 				"unit": "個行人專用時相"
 			},
 			"name": "行人專用時相績效",
@@ -4277,11 +4289,8 @@
 			"short_desc": "顯示桃園市各行政區設置行人專用時相後的績效。",
 			"long_desc": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，資料來源為桃園市交通局內部資料，每週更新。",
 			"use_case": "顯示桃園市各行政區設置行人專用時相後的績效分數，從0-100分，可知道設置行人專用時相後，有沒有改善？",
-			"links": [
-			],
-			"contributors": [
-				"cxll"
-			]
+			"links": [],
+			"contributors": ["tuic"
 		},
 		"150": {
 			"id": 150,
@@ -5472,6 +5481,77 @@
 				"林育緹",
 				"tuic"
 			]
+		},
+		"165": {
+			"id": 165,
+			"index": "pedestrian_scramble",
+			"map_config": [
+				{
+					"index": "pedestrian_scramble",
+					"property": [
+						{
+							"key": "setup_date",
+							"name": "設置時間"
+						},
+						{
+							"key": "district",
+							"name": "區域"
+						},
+						{
+							"key": "intersection_name",
+							"name": "路口名稱"
+						},
+						{
+							"key": "longitude",
+							"name": "緯度"
+						},
+						{
+							"key": "latitude",
+							"name": "經度"
+						},
+						{
+							"key": "time_period_1",
+							"name": "時段1"
+						},
+						{
+							"key": "time_period_2",
+							"name": "時段2"
+						},
+						{
+							"key": "time_period_3",
+							"name": "時段3"
+						}
+					],
+					"type": "symbol",
+					"icon": "little_green_people",
+					"title": "行人專用時相"
+				}
+			],
+			"map_filter": {
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "district"
+				}
+			},
+			"chart_config": {
+				"types": ["DistrictChart", "ColumnChart"],
+				"color": ["#FFE677"],
+				"unit": "個"
+			},
+			"name": "行人專用時相分佈",
+			"source": "桃園市公開資料",
+			"time_from": null,
+			"time_to": null,
+			"update_freq": null,
+			"update_freq_unit": null,
+			"short_desc": "顯示全市行人專用時相的數量和點位",
+			"long_desc": "顯示全市行人專用時相的數量和點位，資料來源為桃園市公開資料，不定期更新。",
+			"use_case": "了解桃園市現今已有的行人專用時相數量與點位，疊加於地圖顯示",
+			"links": [
+				"https://data.taipei/dataset/detail?id=262e80cf-579c-4bfb-ba73-31621bc84616"
+			],
+			"tags": [],
+			"contributors": ["tuic"]
 		}
 	}
 }

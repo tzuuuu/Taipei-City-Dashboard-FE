@@ -357,6 +357,9 @@ export const maplayerCommonLayout = {
 			1.4,
 		],
 	},
+	"symbol-little_green_people": {
+		"icon-image": "little_green_people",
+	},
 	"symbol-metro-density": {
 		"icon-image": "metro",
 		"icon-size": [

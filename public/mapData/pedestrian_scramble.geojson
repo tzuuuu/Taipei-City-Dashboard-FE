@@ -1,0 +1,113 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"setup_date": 20231130,
+				"district": "桃園區",
+				"intersection_name": "桃園火車站前",
+				"longitude": 24.98968636937237,
+				"latitude": 121.3128481283711,
+				"time_period": "每天",
+				"time_period_1": "06:00-00:00",
+				"time_period_2": null,
+				"time_period_3": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.3128481283711, 24.98968636937237]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"setup_date": 20231227,
+				"district": "中壢區",
+				"intersection_name": "中正路與復興路口",
+				"longitude": 24.954488430158275,
+				"latitude": 21.22386614257444,
+				"time_period": "假日",
+				"time_period_1": "09:00-21:00",
+				"time_period_2": null,
+				"time_period_3": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.22386614257444, 24.954488430158275]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"setup_date": 20231228,
+				"district": "中壢區",
+				"intersection_name": "中正路與建國路口",
+				"longitude": 24.93108278,
+				"latitude": 121.2846765,
+				"time_period": "假日",
+				"time_period_1": "09:00-21:00",
+				"time_period_2": null,
+				"time_period_3": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.2846765, 24.93108278]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"setup_date": 20231228,
+				"district": "平鎮區",
+				"intersection_name": "延平路與康樂路口",
+				"longitude": 24.95300029,
+				"latitude": 121.221437,
+				"time_period": "上課期間",
+				"time_period_1": "07:15-07:50",
+				"time_period_2": "12:15-13:00",
+				"time_period_3": "15:40-16:00"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.221437, 24.95300029]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"setup_date": 20231229,
+				"district": "平鎮區",
+				"intersection_name": "延平路二段與廣泰路口",
+				"longitude": 24.94185703,
+				"latitude": 121.2057834,
+				"time_period": "上課期間",
+				"time_period_1": "07:00-08:00",
+				"time_period_2": "16:00-17:00",
+				"time_period_3": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.2057834, 24.94185703]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"setup_date": 20240101,
+				"district": "中壢區",
+				"intersection_name": "中北路口與實踐路口",
+				"longitude": 24.9568469136802,
+				"latitude": 121.239196768968,
+				"time_period": "每天",
+				"time_period_1": "07:00-08:00",
+				"time_period_2": "17:00-19:00",
+				"time_period_3": null
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [121.239196768968, 24.9568469136802]
+			}
+		}
+	]
+}
