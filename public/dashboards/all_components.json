@@ -5548,11 +5548,9 @@
 			"short_desc": "顯示全市行人專用時相的數量和點位",
 			"long_desc": "顯示全市行人專用時相的數量和點位，資料來源為桃園市公開資料，不定期更新。",
 			"use_case": "了解桃園市現今已有的行人專用時相數量與點位，疊加於地圖顯示",
-			"links": [
-				"https://data.taipei/dataset/detail?id=262e80cf-579c-4bfb-ba73-31621bc84616"
-			],
+			"links": [],
 			"tags": [],
-			"contributors": ["tuic"]
+			"contributors": ["cxll"]
 		}
 	}
 }
