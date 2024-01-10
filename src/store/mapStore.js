@@ -88,15 +88,15 @@ export const useMapStore = defineStore("map", {
 		initializeBasicLayers() {
 			const authStore = useAuthStore();
 			fetch(`${BASE_URL}/mapData/taoyuan_town.geojson`)
-			.then((response) => response.json())
-			.then((data) => {
-				this.map
-					.addSource("taoyuan_town", {
-						type: "geojson",
-						data: data,
-					})
-					.addLayer(TaoyuanTown);
-			});
+				.then((response) => response.json())
+				.then((data) => {
+					this.map
+						.addSource("taoyuan_town", {
+							type: "geojson",
+							data: data,
+						})
+						.addLayer(TaoyuanTown);
+				});
 			fetch(`${BASE_URL}/mapData/taipei_town.geojson`)
 				.then((response) => response.json())
 				.then((data) => {
@@ -137,6 +137,7 @@ export const useMapStore = defineStore("map", {
 				"bike_green",
 				"bike_orange",
 				"bike_red",
+				"little_green_people",
 			];
 			images.forEach((element) => {
 				this.map.loadImage(
