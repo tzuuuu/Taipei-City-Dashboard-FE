@@ -5770,6 +5770,57 @@
 			"links": [],
 			"tags": [],
 			"contributors": ["cxll"]
+		},
+		"170": {
+			"id": 170,
+			"index": "all_human_traffic",
+			"map_config": [
+				{
+					"index": "all_human_traffic",
+					"paint":{
+						"circle-color": "#59CD90"
+					},
+					"property": [
+						{
+							"key": "STATION_NAME",
+							"name": "路口名稱"
+						},
+						{
+							"key": "LONG",
+							"name": "經度"
+						},
+						{
+							"key": "LAT",
+							"name": "緯度"
+						},
+						{
+							"key": "HUMAN_TRAFFIC",
+							"name": "人流量"
+						}
+					],
+					"type": "circle",
+					"title": "路口人流量"
+				}
+			],
+			"chart_config": {
+				"types": ["MapLegend"]
+			},
+			"chart_data": [
+				{
+					"type": "fill",
+					"color": "#59CD90",
+					"name": "路口人流量(個)",
+					"value": "224"
+				}
+			],
+			"name": "路口人流量",
+			"source": "交通局",
+			"short_desc": "顯示中原大學周邊路口人流量",
+			"long_desc": "顯示中原大學周邊路口人流量，資料來源為桃園市交通局公開資料，不定期更新。",
+			"use_case": "了解中原大學周邊路口人流量，疊加於地圖顯示，以利設置行人專用時相",
+			"links": ["https://data.gov.tw/dataset/5958"],
+			"tags": [],
+			"contributors": ["cxll"]
 		}
 	}
 }
