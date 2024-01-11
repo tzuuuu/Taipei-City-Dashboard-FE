@@ -212,7 +212,8 @@
 				{
 					"type": "symbol",
 					"icon": "police_station",
-					"name": "警察局"
+					"name": "警察局(家)",
+					"value": "86"
 				}
 			],
 			"name": "警察局分佈",
@@ -1628,60 +1629,64 @@
 			"index": "congested_road",
 			"map_config": [
 				{
-					"index": "traffic_live_view",
+					"index": "congested_road",
 					"paint": {
-						"fill-color": [
+						"line-color": [
 							"match",
-							["get", "壅塞程度"],
-							"壅塞",
-							"#EC4037",
-							"車多",
-							"#ff8c1a",
-							"順暢",
-							"#4dd97a",
-							"#ccc"
+							["get", "congest_level"],
+							["A"],
+							"#59CD90",
+							["B"],
+							"#aad574",
+							["C"],
+							"#FADC58",
+							["D"],
+							"#f4a055",
+							["E"],
+							"#EE6352",
+							"#59CD90"
 						]
 					},
 					"property": [
 						{
-							"key": "snippet",
-							"name": "路段代號"
+							"key": "road_segment_id",
+							"name": "路段代碼"
 						},
 						{
-							"key": "壅塞程度",
+							"key": "road_id",
+							"name": "道路代碼"
+						},
+						{
+							"key": "road_name",
+							"name": "道路名稱"
+						},
+						{
+							"key": "congest_level",
 							"name": "壅塞程度"
-						},
-						{
-							"key": "description",
-							"name": "描述"
-						},
-						{
-							"key": "update_at",
-							"name": "更新時間"
 						}
 					],
-					"type": "fill",
+					"type": "line",
+					"size": "wide",
 					"title": "壅塞程度"
 				}
 			],
 			"map_filter": {
 				"mode": "byParam",
 				"byParam": {
-					"xParam": "壅塞程度"
+					"xParam": "congest_level"
 				}
 			},
 			"history_data": true,
 			"history_data_color": ["#B56969"],
 			"chart_config": {
 				"color": [
-					"#8498a2",
-					"#84A28A",
-					"#B6C995",
-					"#DED38E",
-					"#DAA368",
-					"#B56969"
+					"#59CD90",
+					"#aad574",
+					"#FADC58",
+					"#f4a055",
+					"#EE6352"
 				],
-				"types": ["DonutChart", "BarChart", "TreemapChart"],
+				"types": ["BarChart", "DonutChart", "TreemapChart"],
 				"unit": "%"
 			},
 			"name": "壅塞路況",
@@ -2360,7 +2365,7 @@
 			"index": "police_dispatched",
 			"map_config": null,
 			"chart_config": {
-				"color": ["#bc7262"],
+				"color": ["#EE6352"],
 				"types": ["RadarChart", "ColumnChart", "DistrictChart"],
 				"unit": "次"
 			},
@@ -3574,7 +3579,7 @@
 			"history_data": false,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#ded373"],
+				"color": ["#FADC58"],
 				"unit": "分"
 			},
 			"name": "路口績效",
@@ -3597,7 +3602,7 @@
 			"history_data": false,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#dcf043"],
+				"color": ["#EE6352"],
 				"unit": "次"
 			},
 			"name": "出警次數",
@@ -3620,7 +3625,7 @@
 			"history_data": false,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#71d1c1"],
+				"color": ["#59CD90"],
 				"unit": "秒"
 			},
 			"name": "交通效能-人車平均停等時間",
@@ -3652,13 +3657,7 @@
 					"9/10(日)"
 				],
 				"types": ["HeatmapChart"],
-				"color": [
-					"#B56969",
-					"#DAA368",
-					"#DED38E",
-					"#B6C995",
-					"#84A28A"
-				],
+				"color": ["#EE6352", "#FADC58", "#59CD90"],
 				"unit": "人/小時"
 			},
 			"name": "人流量",
@@ -3681,7 +3680,7 @@
 			"history_data": true,
 			"chart_config": {
 				"types": ["ColumnChart"],
-				"color": ["#b57474"],
+				"color": ["#EE6352"],
 				"unit": "件"
 			},
 			"name": "人車事故發生數量",
@@ -4351,7 +4350,7 @@
 					"復興區"
 				],
 				"types": ["HeatmapChart", "DistrictChart"],
-				"color": ["#B56969", "#DAA368", "#84A28A"],
+				"color": ["#59CD90", "#FADC58", "#EE6352"],
 				"unit": "個行人專用時相"
 			},
 			"name": "行人專用時相績效",
@@ -5609,7 +5608,7 @@
 			},
 			"chart_config": {
 				"types": ["DistrictChart", "ColumnChart"],
-				"color": ["#FFE677"],
+				"color": ["#59CD90"],
 				"unit": "個"
 			},
 			"name": "行人專用時相分佈",
@@ -5621,6 +5620,69 @@
 			"short_desc": "顯示全市行人專用時相的數量和點位",
 			"long_desc": "顯示全市行人專用時相的數量和點位，資料來源為桃園市公開資料，不定期更新。",
 			"use_case": "了解桃園市現今已有的行人專用時相數量與點位，疊加於地圖顯示",
+			"links": [],
+			"tags": [],
+			"contributors": ["cxll"]
+		},
+		"166": {
+			"id": 166,
+			"index": "traffic_people_accident",
+			"map_config": [
+				{
+					"index": "traffic_people_accident",
+					"property": [
+						{
+							"key": "發生時間",
+							"name": "發生時間"
+						},
+						{
+							"key": "緯度",
+							"name": "緯度"
+						},
+						{
+							"key": "經度",
+							"name": "經度"
+						},
+						{
+							"key": "區域",
+							"name": "區域"
+						},
+						{
+							"key": "路口名稱",
+							"name": "路口名稱"
+						},
+						{
+							"key": "號誌狀態",
+							"name": "號誌狀態"
+						},
+						{
+							"key": "事故類型",
+							"name": "事故類型"
+						},
+						{
+							"key": "原因",
+							"name": "原因"
+						}
+					],
+					"title": "車禍事故點位",
+					"type": "symbol",
+					"icon": "traffic"
+				}
+			],
+			"chart_config": {
+				"color": ["#EE6352", "#FADC58"],
+				"types": ["DonutChart", "BarChart"],
+				"unit": "次"
+			},
+			"name": "車禍事故統計",
+			"source": "交通局",
+			"time_from": "2022-01-01T00:00:00+08:000",
+			"time_to": "2022-12-31T00:00:00+08:000",
+			"update_freq": null,
+			"update_freq_unit": null,
+			"short_desc": "顯示當前全桃園市發生車禍事故點位與次數，包括「人對車」與「車對車」兩類",
+			"long_desc": "顯示當前當前全桃園市發生車禍事故點位與次數，包括「人對車」與「車對車」兩類，資料來源為桃園市交通局公開資料，不定期更新。",
+			"use_case": "概覽桃園市車禍發生概況與點位情況，可透過地圖模式查詢，幫助我們更好地規劃行人專用時相。",
 			"links": [],
 			"tags": [],
 			"contributors": ["cxll"]
