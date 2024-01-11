@@ -359,6 +359,31 @@ export const maplayerCommonLayout = {
 	},
 	"symbol-little_green_people": {
 		"icon-image": "little_green_people",
+		"icon-size": [
+			"interpolate",
+			["linear"],
+			["zoom"],
+			11.99,
+			0.02,
+			14,
+			0.03,
+			22,
+			0.08,
+		],
+	},
+	"symbol-traffic": {
+		"icon-image": "traffic",
+		"icon-size": [
+			"interpolate",
+			["linear"],
+			["zoom"],
+			11.99,
+			0.04,
+			14,
+			0.05,
+			22,
+			0.1,
+		],
 	},
 	"symbol-police_station": {
 		"icon-image": "police_station",
