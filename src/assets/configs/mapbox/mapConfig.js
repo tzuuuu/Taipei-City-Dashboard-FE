@@ -2,7 +2,7 @@
 export const MapObjectConfig = {
 	antialias: true,
 	container: "mapboxBox",
-	center: [121.251374, 24.932593],
+	center: [121.2391968, 24.95684691],
 	maxBounds: [
 		[121.0970596781498, 24.65733863075891], // Southwest coordinates
 		[121.4198231749096, 25.11179993640203], // Northeast coordinates

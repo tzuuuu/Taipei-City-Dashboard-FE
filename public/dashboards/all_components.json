@@ -167,11 +167,15 @@
 		},
 		"10": {
 			"id": 10,
-			"index": "police_facility_taoyuan",
+			"index": "police_station_taoyuan",
 			"map_config": [
 				{
 					"index": "police_station_taoyuan",
 					"property": [
+						{
+							"key": "district",
+							"name": "區域"
+						},
 						{
 							"key": "OFFICE_NAME",
 							"name": "所屬分局"
@@ -203,21 +207,23 @@
 				}
 			],
 			"map_filter": {
-				"mode": "byLayer"
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "district"
+				}
 			},
 			"chart_config": {
-				"types": ["MapLegend"]
+				"types": ["DistrictChart", "RadarChart"],
+				"color": ["#aad574"],
+				"unit": "所"
 			},
-			"chart_data": [
-				{
-					"type": "symbol",
-					"icon": "police_station",
-					"name": "警察局(家)",
-					"value": "86"
-				}
-			],
+
 			"name": "警察局分佈",
 			"source": "警察局",
+			"time_from": null,
+			"time_to": null,
+			"update_freq": null,
+			"update_freq_unit": null,
 			"short_desc": "顯示全市警察局的點位",
 			"long_desc": "顯示全市警察局的點位，資料來源為桃園市警察局公開資料，不定期更新。",
 			"use_case": "了解桃園市現今已有的警察局，疊加於地圖顯示",
@@ -2460,6 +2466,84 @@
 			"update_freq_unit": null,
 			"contributors": ["tuic"]
 		},
+		"102": {
+			"id": 102,
+			"index": "road_width",
+			"map_config": [
+				{
+					"index": "road_width",
+					"paint": {
+						"fill-color": [
+							"match",
+							["get", "width_type"],
+							"小於10公尺",
+							"#f4a055",
+							"10-20公尺",
+							"#FADC58",
+							"20公尺以上",
+							"#aad574",
+							"green"
+						]
+					},
+					"property": [
+						{
+							"key": "road_segment_code",
+							"name": "路段代碼"
+						},
+						{
+							"key": "roadName",
+							"name": "道路名稱"
+						},
+						{
+							"key": "intersection",
+							"name": "路段範圍"
+						},
+						{
+							"key": "road_length",
+							"name": "路段長度"
+						},
+						{
+							"key": "road_width",
+							"name": "路段寬度"
+						},
+						{
+							"key": "width_type",
+							"name": "寬度類別"
+						},
+						{
+							"key": "area",
+							"name": "面積"
+						}
+					],
+					"type": "fill",
+					"title": "道路寬度"
+				}
+			],
+			"map_filter": {
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "width_type"
+				}
+			},
+			"chart_config": {
+				"color": ["#f4a055", "#FADC58","#aad574"],
+				"types": [ "ColumnChart","TreemapChart","DonutChart"],
+				"unit": "個路段"
+			},
+			"name": "道路寬度",
+			"source": "工務局",
+			"time_from": null,
+			"time_to": null,
+			"update_freq": null,
+			"update_freq_unit": null,
+			"short_desc": "顯示桃園市道路寬度資訊",
+			"long_desc": "顯示桃園市道路寬度資訊。",
+			"use_case": "顯示桃園市道路寬度資訊",
+			"links": [
+				"https://data.tycg.gov.tw/opendata/datalist/datasetMeta?oid=c7351614-a9e5-46ac-bcc1-dd35e2d45475"
+			],
+			"contributors": ["cxll"]
+		},
 		"103": {
 			"id": 103,
 			"index": "parks",
@@ -4349,7 +4433,7 @@
 					"觀音區",
 					"復興區"
 				],
-				"types": ["HeatmapChart", "DistrictChart"],
+				"types": ["HeatmapChart"],
 				"color": ["#59CD90", "#FADC58", "#EE6352"],
 				"unit": "個行人專用時相"
 			},
