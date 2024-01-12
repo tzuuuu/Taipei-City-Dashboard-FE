@@ -5758,6 +5758,12 @@
 				"types": ["DonutChart", "BarChart"],
 				"unit": "次"
 			},
+			"map_filter": {
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "事故類型"
+				}
+			},
 			"name": "車禍事故統計",
 			"source": "交通局",
 			"time_from": "2022-01-01T00:00:00+08:000",
