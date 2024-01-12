@@ -100,13 +100,13 @@
 		{
 			"name": "路口管控",
 			"index": "intersection",
-			"components": ["58", "149", "165", "166", "102", "10", "170"],
+			"components": ["170", "102", "58", "165", "166", "10", "149"],
 			"icon": "edit_road"
 		},
 		{
 			"name": "中北路口",
 			"index": "zhongbei_intersection",
-			"components": ["138", "139", "137", "136", "135"],
+			"components": ["138", "137", "139", "136", "135"],
 			"icon": "my_location"
 		}
 	]
