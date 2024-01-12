@@ -5803,16 +5803,10 @@
 				}
 			],
 			"chart_config": {
-				"types": ["MapLegend"]
+				"color": ["#f4a055", "#FADC58","#aad574","#59CD90"],
+				"types": [ "TreemapChart","ColumnChart","DonutChart"],
+				"unit": "個路口"
 			},
-			"chart_data": [
-				{
-					"type": "fill",
-					"color": "#59CD90",
-					"name": "路口人流量(個)",
-					"value": "224"
-				}
-			],
 			"name": "路口人流量",
 			"source": "交通局",
 			"short_desc": "顯示中原大學周邊路口人流量",
