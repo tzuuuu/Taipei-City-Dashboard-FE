@@ -2526,8 +2526,8 @@
 				}
 			},
 			"chart_config": {
-				"color": ["#f4a055", "#FADC58","#aad574"],
-				"types": [ "ColumnChart","TreemapChart","DonutChart"],
+				"color": ["#f4a055", "#FADC58", "#aad574"],
+				"types": ["ColumnChart", "TreemapChart", "DonutChart"],
 				"unit": "個路段"
 			},
 			"name": "道路寬度",
@@ -5777,8 +5777,19 @@
 			"map_config": [
 				{
 					"index": "all_human_traffic",
-					"paint":{
-						"circle-color": "#59CD90"
+					"paint": {
+						"circle-color": [
+							"case",
+							["==", ["get", "tier"], "500以下"],
+							"#59CD90",
+							["==", ["get", "tier"], "500~750"],
+							"#FADC58",
+							["==", ["get", "tier"], "750~1000"],
+							"#f4a055",
+							["==", ["get", "tier"], "1000以上"],
+							"#EE6352",
+							"#B56969"
+						]
 					},
 					"property": [
 						{
@@ -5799,12 +5810,19 @@
 						}
 					],
 					"type": "circle",
-					"title": "路口人流量"
+					"title": "路口人流量",
+					"size": "big"
 				}
 			],
+			"map_filter": {
+				"mode": "byParam",
+				"byParam": {
+					"xParam": "tier"
+				}
+			},
 			"chart_config": {
-				"color": ["#f4a055", "#FADC58","#aad574","#59CD90"],
-				"types": [ "TreemapChart","ColumnChart","DonutChart"],
+				"color": ["#EE6352","#FADC58","#f4a055"],
+				"types": ["TreemapChart", "ColumnChart", "DonutChart"],
 				"unit": "個路口"
 			},
 			"name": "路口人流量",
