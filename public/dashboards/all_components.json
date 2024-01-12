@@ -213,7 +213,7 @@
 				}
 			},
 			"chart_config": {
-				"types": ["DistrictChart", "RadarChart"],
+				"types": ["RadarChart","DistrictChart"],
 				"color": ["#aad574"],
 				"unit": "所"
 			},
